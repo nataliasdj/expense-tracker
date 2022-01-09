@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { Provider } from './context/context'; //(3), thus we want to wrap our APp with the provider
+import App from './App'; //main component
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <Provider>
+        <App />
+    </Provider>,
+    document.getElementById('root'));//app go inside our document.getEl, which we will target root, a div in our html, 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    //so we wrapped our application inside our provider
+    //first step, we store the info (value) at that context, so how to retrieve that inside all our component, so lets go to the List.jsx a very nested component, just impor t(3)

@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import Details from './components/Details/Details';
+import Main from './components/Main/Main';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import useStyles from './styles';
+
+
+const App = () => {
+    const classes = useStyles();
+    return(
+        <div>
+            <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{height: '100vh'}}>
+                {/* extra small is full space aka full width aka 12 */}
+                {/* if on mobile, this will be hidden - see comment in styles.js*/}
+                <Grid item xs={12} sm={4} className={classes.mobile}>
+                    <Details title="Income"/>
+                </Grid>
+                <Grid item xs={12} sm={3} className={classes.main}>
+                    <Main />
+                </Grid>
+                <Grid item xs={12} sm={4} className={classes.desktop}>
+                    <Details title="Income"/>
+                </Grid>
+                {/* use props to change the little detail ex income vs expense title in the Details component, so go to details component to make it dynamic (2) */}
+                <Grid item xs={12} sm={4} classes={classes.last}>
+                    <Details title="Expense" />
+                </Grid>
+
+            </Grid>
+        </div>
+    )
 }
 
 export default App;
