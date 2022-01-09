@@ -1,5 +1,4 @@
-Try
-In the project directory, you can run:
+Try see the application: https://expense-tracker-saving-up.netlify.app
 
 ### `npm start`
 
