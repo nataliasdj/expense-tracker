@@ -11,7 +11,7 @@ const App = () => {
     return(
         <div>
             <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{height: '100vh'}}>
-                {/* extra small is full space aka full width aka 12 */}
+                {/* extra small xs is full space aka full width aka 12 */}
                 {/* if on mobile, this will be hidden - see comment in styles.js*/}
                 <Grid item xs={12} sm={4} className={classes.mobile}>
                     <Details title="Income"/>
