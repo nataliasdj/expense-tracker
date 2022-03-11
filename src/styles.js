@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  
   //if we are on devices larger than small, hide it
   desktop: {
     [theme.breakpoints.up('sm')]: {
