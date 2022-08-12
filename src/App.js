@@ -25,7 +25,6 @@ const App = () => {
                 <Grid item xs={12} sm={4} classes={classes.last}>
                     <Details title="Expense" />
                 </Grid>
-
             </Grid>
         </div>
     )
