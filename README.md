@@ -1,4 +1,4 @@
-Track your expenses with this application
+# Track your expenses with this application
 
 Try see the application: https://expense-tracker-saving-up.netlify.app
 
